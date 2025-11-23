@@ -33,11 +33,6 @@ export class Capture {
   private readonly MAX_HEIGHT = 1080;
 
   start() {
-    // Initialize gameView once
-    this.#canvas = document.createElement('canvas');
-    document.body.appendChild(this.#canvas);
-    this.#gameView = createGameView(this.#canvas);
-
     window.addEventListener('message', async (event) => {
       const data = event.data as CaptureRequest;
 
